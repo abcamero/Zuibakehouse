@@ -18,5 +18,22 @@
       { "name": "Orange zest", "qty": 2 },
       { "name": "Ground almond", "qty": 75 }
     ]
-  }
+  },
+  "banana_choc_chip": {
+      "name": "Banana Chocolate Chip Cake",
+      "base_containers": 7,
+      "base_total_batter": 761,
+      "grams_per_container": 100,
+      "ingredients": [
+        { "name": "Flour", "qty": 200 },
+        { "name": "Sugar", "qty": 60 },
+        { "name": "Condensed milk", "qty": 200 },
+        { "name": "Baking Soda", "qty": 3 },
+        { "name": "Curd", "qty": 75 },
+        { "name": "Butter", "qty": 60 },
+        { "name": "Vanilla essence", "qty": 3 },
+        { "name": "Banana", "qty": 140 },
+        { "name": "Chocolate chips", "qty": 20 }
+      ]
+    }
 }

@@ -13,22 +13,33 @@
 </head>
 <body class="bg-stone-50 text-stone-800 min-h-screen p-4 md:p-8">
 
-    <nav class="max-w-4xl mx-auto mb-8 flex gap-4 border-b border-stone-200 pb-4">
-        <button class="px-4 py-2 bg-amber-800 text-white rounded-lg font-medium text-sm">Production Scaler</button>
+    <nav class="max-w-5xl mx-auto mb-8 flex gap-4 border-b border-stone-200 pb-4">
+        <button class="px-4 py-2 bg-amber-800 text-white rounded-lg font-medium text-sm shadow-sm">Production Scaler</button>
         <button class="px-4 py-2 text-stone-500 hover:bg-stone-200 rounded-lg font-medium text-sm transition-colors">Inventory (Coming Soon)</button>
     </nav>
 
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-5xl mx-auto">
         <header class="text-center mb-10">
             <h1 class="text-5xl font-bold text-amber-800 mb-2 serif">ZuiBakeHouse</h1>
             <p class="text-stone-500 uppercase tracking-widest text-sm">Production Dashboard</p>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
             <div class="md:col-span-1 space-y-6">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+                    <label for="recipeSelect" class="block text-sm font-semibold text-stone-600 mb-2">Select Recipe</label>
+                    <select id="recipeSelect" class="w-full text-base font-medium text-stone-800 bg-stone-50 border border-stone-200 rounded-lg p-3 focus:ring-2 focus:ring-amber-500 focus:outline-none cursor-pointer">
+                        <option value="chocolate_orange">Chocolate Orange Cake</option>
+                        <option value="banana_choc_chip">Banana Chocolate Chip Cake</option>
+                    </select>
+                </div>
+
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
                     <label class="block text-sm font-semibold text-stone-600 mb-2">Target Containers</label>
-                    <input type="number" id="targetContainers" min="9" value="32" class="w-full text-3xl font-bold text-amber-900 bg-amber-50 border border-amber-200 rounded-lg p-3 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    <input type="number" id="targetContainers" min="9" value="14" class="w-full text-3xl font-bold text-amber-900 bg-amber-50 border border-amber-200 rounded-lg p-3 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    <p id="minBatchHint" class="text-xs text-stone-400 mt-2">Minimum batch size is 9 containers.</p>
                 </div>
 
                 <div class="bg-amber-800 text-white p-6 rounded-2xl shadow-md">
@@ -50,10 +61,14 @@
                 </div>
             </div>
 
-            <div class="md:col-span-2 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+            <div class="md:col-span-2 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden self-start">
+                <div class="bg-stone-100 px-6 py-4 border-b border-stone-200 flex justify-between items-center">
+                    <h2 id="recipeTitle" class="serif text-xl font-semibold text-stone-800">Chocolate Orange Cake Formula</h2>
+                    <span id="baseRecipeBadge" class="text-xs font-medium bg-stone-200 text-stone-600 px-2 py-1 rounded-full">Base: 9 units</span>
+                </div>
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-stone-50 text-stone-500 text-xs uppercase tracking-wider">
+                        <tr class="bg-stone-50 text-stone-500 text-xs uppercase tracking-wider border-b border-stone-200">
                             <th class="px-6 py-3 font-medium">Ingredient</th>
                             <th class="px-6 py-3 font-medium text-right">Required (g)</th>
                         </tr>
