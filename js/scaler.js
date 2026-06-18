@@ -38,7 +38,7 @@ function initScaler() {
         tableBody.innerHTML = '';
 
         recipeData.ingredients.forEach(item => {
-            const scaledQty = (item.qty * multiplier).toFixed(1);
+            const scaledQty = Math.round(item.qty * multiplier);
             const row = document.createElement('tr');
             row.className = "hover:bg-stone-50 transition-colors";
             row.innerHTML = `
