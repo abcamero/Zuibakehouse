@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZuiBakeHouse | Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 min-h-screen p-4 md:p-8">
+
+    <nav class="max-w-4xl mx-auto mb-8 flex gap-4 border-b border-stone-200 pb-4">
+        <button class="px-4 py-2 bg-amber-800 text-white rounded-lg font-medium text-sm">Production Scaler</button>
+        <button class="px-4 py-2 text-stone-500 hover:bg-stone-200 rounded-lg font-medium text-sm transition-colors">Inventory (Coming Soon)</button>
+    </nav>
+
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-bold text-amber-800 mb-2 serif">ZuiBakeHouse</h1>
+            <p class="text-stone-500 uppercase tracking-widest text-sm">Production Dashboard</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-1 space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-200">
+                    <label class="block text-sm font-semibold text-stone-600 mb-2">Target Containers</label>
+                    <input type="number" id="targetContainers" min="9" value="32" class="w-full text-3xl font-bold text-amber-900 bg-amber-50 border border-amber-200 rounded-lg p-3 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                </div>
+
+                <div class="bg-amber-800 text-white p-6 rounded-2xl shadow-md">
+                    <h2 class="serif text-2xl mb-4 border-b border-amber-700 pb-2">Production Yield</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-amber-200/80 text-sm uppercase tracking-wide">Total Batter Mixed</p>
+                            <p class="text-2xl font-bold" id="totalBatterVal">0.0 g</p>
+                        </div>
+                        <div class="bg-amber-900/50 p-3 rounded-lg border border-amber-700/50">
+                            <p class="text-amber-200/80 text-sm uppercase tracking-wide">Actual Containers</p>
+                            <p class="text-4xl font-bold text-amber-400" id="actualYieldVal">0</p>
+                        </div>
+                        <div>
+                            <p class="text-amber-200/80 text-sm uppercase tracking-wide">Remaining Waste</p>
+                            <p class="text-xl font-medium text-orange-300" id="wasteVal">0.0 g</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-stone-50 text-stone-500 text-xs uppercase tracking-wider">
+                            <th class="px-6 py-3 font-medium">Ingredient</th>
+                            <th class="px-6 py-3 font-medium text-right">Required (g)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recipeTableBody" class="divide-y divide-stone-100">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scaler.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "chocolate_orange_cake": {
+    "name": "Chocolate Orange Cake",
+    "base_containers": 9,
+    "base_total_batter": 929,
+    "grams_per_container": 100,
+    "ingredients": [
+      { "name": "Butter", "qty": 75 },
+      { "name": "Sugar", "qty": 125 },
+      { "name": "Eggs", "qty": 250 },
+      { "name": "Cocoa powder", "qty": 25 },
+      { "name": "Honey", "qty": 75 },
+      { "name": "Fresh cream", "qty": 120 },
+      { "name": "Flour", "qty": 120 },
+      { "name": "Baking powder", "qty": 8 },
+      { "name": "Dark chocolate 58.8%", "qty": 50 },
+      { "name": "Vanilla essence", "qty": 4 },
+      { "name": "Orange zest", "qty": 2 },
+      { "name": "Ground almond", "qty": 75 }
+    ]
+  }
+}
